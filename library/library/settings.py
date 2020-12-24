@@ -28,7 +28,7 @@ SECRET_KEY = 'q$k0rfy@iv3ty=w#zx82j=*zmou@dyvn5+y&$%a)u@a2&o0+0g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://tbng-backend.herokuapp.com/']
 
 
 # Application definition
