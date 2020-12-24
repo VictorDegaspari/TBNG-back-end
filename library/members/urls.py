@@ -32,4 +32,4 @@ schema_view = get_schema_view(
 
 router = routers.DefaultRouter()
 
-router.register(r'member', views.UserViewSet)
+router.register(r'member', views.MembersViewSet)
