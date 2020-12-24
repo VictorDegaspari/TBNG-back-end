@@ -6,7 +6,11 @@ djangorestframework==3.12.2
 gunicorn==20.0.4
 Pillow==8.0.1
 psycopg2==2.8.6
+<<<<<<< HEAD
 python-dateutil==1.5
 pytz==2020.4
+=======
+pytz==2020.5
+>>>>>>> 3d26debb19902514d881129c93d276811f7cb62e
 sqlparse==0.4.1
 whitenoise==5.2.0
