@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+import django_heroku
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +27,8 @@ SECRET_KEY = 'q$k0rfy@iv3ty=w#zx82j=*zmou@dyvn5+y&$%a)u@a2&o0+0g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://tbng-backend.herokuapp.com/',
+                 'https://tbng.vercel.app/']
 
 
 # Application definition
@@ -131,3 +134,5 @@ REST_FRAMEWORK = {
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+django_heroku.settings(locals())
