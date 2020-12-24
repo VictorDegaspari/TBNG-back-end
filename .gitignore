@@ -1,0 +1,4 @@
+.venv
+venv
+library/venv
+library/db.sqlite3
