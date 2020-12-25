@@ -12,7 +12,7 @@ router.register(r'members', MembersViewSet, basename="Members")
 
 def get_url_scheme():
     if settings.DEBUG:
-        return 'http://localhost:8000/api/'
+        return 'http://localhost:8000/'
 
 
 urlpatterns = [
