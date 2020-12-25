@@ -10,6 +10,11 @@ router.register(r'groups', GroupViewSet)
 router.register(r'members', MembersViewSet, basename="Members")
 
 
+def get_url_scheme():
+    if settings.DEBUG:
+        return 'http://localhost:8000/api/'
+
+
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
