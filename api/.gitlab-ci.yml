@@ -1,0 +1,24 @@
+###### STAGES ######
+stages:
+  - tests
+  - deploy
+###### /STAGES ######
+
+###### CACHE ######
+cache:
+  paths:
+    - .pip
+###### /CACHE ######
+
+################# DEPLOY STEPS #################
+DEPLOY_HEROKU:
+  stage: deploy
+  image: tmaier/dpl
+  script:
+    - cd src
+    - dpl --provider=heroku --app=$APP_NAME --api-key=$HEROKU_API_KEY
+
+  only:
+    - master
+    - task/deploy
+################# /DEPLOY STEPS #################

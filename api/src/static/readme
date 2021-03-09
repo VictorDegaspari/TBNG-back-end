@@ -1,0 +1,4 @@
+Atenção:
+PASTA EXTREMAMENTE IMPORTANTE PARA O DEPLOY NO HEROKU!!!
+Não apagar esse arquivo em hipótese alguma.
+Por questões técnicas, é necessário o git reconhecer essa pasta.

@@ -1,0 +1,141 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Docker - Stop Dockers",
+            "type": "shell",
+            "command": "make docker-stop-all",
+            "problemMatcher": []
+        },
+        {
+            "label": "PIP - Install Dependencies",
+            "type": "shell",
+            "command": "make pip-install-dependencies",
+            "problemMatcher": []
+        },
+        {
+            "label": "PIP - Save Dependencies",
+            "type": "shell",
+            "command": "make pip-save-dependencies",
+            "problemMatcher": []
+        },
+        {
+            "label": "Database - Reset",
+            "type": "shell",
+            "command": "make database-reset",
+            "problemMatcher": []
+        },        
+        {
+            "label": "Docker - Clear Environment",
+            "type": "shell",
+            "command": "make docker-clear",
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker - Docker Compose Up",
+            "type": "shell",
+            "command": "make docker-compose-up",
+            "problemMatcher": []
+        },
+        {
+            "label": "Docker - Restart Docker-Compose",
+            "type": "shell",
+            "command": "make docker-restart",
+            "problemMatcher": []
+        },
+        {
+            "label": "Python - Clear Cache",
+            "type": "shell",
+            "command": "make python-clear-cache",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Start Environment Full",
+            "type": "shell",
+            "command": "make django-start-full",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Migrate",
+            "type": "shell",
+            "command": "make django-migrate",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - SyncDB",
+            "type": "shell",
+            "command": "make django-sync-db",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Make Migrations",
+            "type": "shell",
+            "command": "make django-make-migrations",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Run Server",
+            "type": "shell",
+            "command": "make django-runserver",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Load Dev Environment",
+            "type": "shell",
+            "command": "make django-load-env",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Test",
+            "type": "shell",
+            "command": "make django-test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - WIP Test",
+            "type": "shell",
+            "command": "make django-test-wip",
+            "problemMatcher": []
+        },
+        {
+            "label": "Django - Create New App",
+            "type": "shell",
+            "command": "make app=${input:app_name} django-create-app",
+            "problemMatcher": []
+        },
+        {
+            "label": "Browser - Open",
+            "type": "shell",
+            "command": "make browser-open",
+            "problemMatcher": [],
+        },
+        {
+            "label": "GIT - Commit",
+            "type": "shell",
+            "command": "make commit_message=\"${input:commit_message}\" git-commit",
+            "problemMatcher": []
+        },
+        {
+            "label": "Celery - Start Worker",
+            "type": "shell",
+            "command": "make celery-start-worker",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "app_name",
+            "description": "Nome do App Django",
+            "default": "new_app",
+            "type": "promptString"
+        },
+        {
+            "id": "commit_message",
+            "description": "Mensagem de Commit",
+            "default": "",
+            "type": "promptString"
+        },        
+    ]
+}

@@ -1,0 +1,3 @@
+release: bash internal_scripts/release.sh
+web: bash internal_scripts/web.sh
+worker: bash internal_scripts/worker.sh
