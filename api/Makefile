@@ -98,7 +98,7 @@ git-commit:
 	git commit -a -m "$(commit_message)"
 
 git-clear-local-branches:
-	git branch | grep -v "master" | xargs git branch -D
+	git branch | grep -v "main" | xargs git branch -D
 
 pip-install-dependencies:
 	source venv/bin/activate
