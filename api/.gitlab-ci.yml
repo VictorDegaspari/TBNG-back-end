@@ -19,6 +19,6 @@ DEPLOY_HEROKU:
     - dpl --provider=heroku --app=$APP_NAME --api-key=$HEROKU_API_KEY
 
   only:
-    - master
+    - main
     - task/deploy
 ################# /DEPLOY STEPS #################
