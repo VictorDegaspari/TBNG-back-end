@@ -12,7 +12,13 @@ def upload_image_member(instance, filename):
 class Members(models.Model):
     id_member = models.UUIDField(
         primary_key=True, default=uuid4, editable=False)
-    vip = models.IntegerField(default=0)
+    PLANO_BASICO = "Não"
+    PLANO_PREMIUM = "Sim"
+    PLANOS = (
+        (PLANO_BASICO, "básico"),
+        (PLANO_PREMIUM, "premium")
+    )
+    vip = models.CharField(max_length=3,choices=PLANOS, default="Não")
     nome = models.CharField(max_length=255)
     nickname = models.CharField(max_length=255)
     created_at = models.DateField(auto_now_add=True)

@@ -15,4 +15,4 @@ class UserSerializer(serializers.ModelSerializer):
 class MembersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Members
-        fields = '__all__'
+        fields = ['vip', 'nickname', 'nome', 'created_at']
